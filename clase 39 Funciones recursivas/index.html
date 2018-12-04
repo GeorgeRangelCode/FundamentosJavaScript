@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase 39 - Funciones Recursivas</title>
+</head>
+<body>
+	<script>
+		
+		/*
+
+			13 / 4
+
+		*/
+
+		function divisionEntera(dividendo, divisor) {
+			// Caso base
+			if (dividendo < divisor) {
+				return 0;
+			}	
+			return 1 + divisionEntera(dividendo - divisor, divisor);
+		}
+
+		console.log(divisionEntera(13, 4));
+
+	</script>
+</body>
+</html>

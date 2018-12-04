@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase 37 - var, let y const las diferencias entre ellos</title>
+</head>
+<body>
+	<script>
+		
+		var jorge = {
+			nombre: 'jorge',
+			apellido: 'edad',
+			edad: 23
+		}
+
+		function esMayorDeEdad(persona) {
+			let mensaje;
+			const MAYORIA_DE_EDAD = 18;
+			if (persona.edad >= 18) {
+				mensaje  = 'mayor de edad';
+			} else {
+				mensaje = 'es menor de edad';
+			}
+			console.log(mensaje);
+		}
+
+		esMayorDeEdad(jorge);
+
+		// let reduce el alcance de la variable solo sepuede usar dentro de for
+		for (let i = 0; i < 10; i++) {
+			console.log(i);
+		}
+
+		console.log(`termino el for el valor de i es ${i}`);
+
+
+		// var se puede usar fuera del for
+		for (var i = 0; i < 10; i++) {
+		console.log(i);
+		}
+
+		console.log(`termino el for el valor de i es ${i}`);
+
+		// lo mejor es let para reducir en minimo el alcance de las variables
+
+	</script>
+</body>
+</html>

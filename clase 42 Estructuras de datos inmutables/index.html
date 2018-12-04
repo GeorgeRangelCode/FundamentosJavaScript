@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase 42 - Estructuras de datos inmutables</title>
+</head>
+<body>
+	<script>
+		
+		const jorge = {
+			nombre: 'jorge',
+			apellido: 'rangel',
+			edad: 23
+		}
+
+		//const cumpleaños = persona => persona.edad++
+
+		const cumpleanosinmutable = persona => ({
+			...persona,
+			edad: persona.edad + 1
+		})
+
+
+	</script>
+</body>
+</html>

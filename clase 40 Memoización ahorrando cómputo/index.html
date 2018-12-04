@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase 40 - Memoización: ahorrando cómputo</title>
+</head>
+<body>
+	<script>
+		
+		/*
+
+			!6 = 6* 5 * 4 * 3 * 2 * 1 = 720
+
+
+		*/
+
+		function factorial(n) {
+			if (!this.cache) {
+				this.cache = {}	
+			}
+
+			if (this.cache[n]) {
+				return this.cache[n]
+			}
+
+			// Caso base
+			if (n === 1 ) {
+				return 1
+			}
+
+			this.cache[n] = n * factorial(n - 1);
+			return this.cache[n]
+		}
+
+		console.log(factorial(6));
+
+	</script>
+</body>
+</html>

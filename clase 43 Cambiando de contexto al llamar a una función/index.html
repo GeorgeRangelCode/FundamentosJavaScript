@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Clase 43 - Cambiando de contexto al llamar a una función</title>
+</head>
+<body>
+	<script>
+		
+		const jorge = {
+			nombre: 'jorge',
+			apellido: 'rangel',
+			edad: 23
+		}
+
+		const juan = {
+			nombre: 'juan',
+			apellido: 'perez',
+			edad: 24
+		}
+
+		function saludar(saludo = 'hola'){
+			console.log(`${saludo}, mi nombre es ${this.nombre}`)
+		}
+
+		// cambiar el this de una funcion
+
+		//const saludarAJorge = saludar.bind(jorge) // bind devuelve una nueva funcion atando el valor de this
+		//const saludarAJuan = saludar.bind(juan) // bind devuelve una nueva funcion atando el valor de this
+
+		//setTimeout(saludar.bind(jorge, 'Hola Joven'), 1000)
+
+		//saludar.call(jorge, 'Hola Joven') // call ejecuta la funcion
+
+		saludar.apply(jorge, ['Hola Joven'])
+
+	</script>
+</body>
+</html>
